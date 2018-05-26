@@ -18,6 +18,6 @@
  */
 bool processFile(struct tsWordTree *, char *);
 
-void * wordAddWait(struct tsWordTree*);
+void * wordAddWait(void*);
 
 #endif /* WORDCOUNTER_H_ */

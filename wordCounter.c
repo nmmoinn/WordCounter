@@ -152,7 +152,7 @@ bool processFile(struct tsWordTree * tree, char * fileName) {
 	return false;
 }
 
-void * wordAddWait(struct tsWordTree* tree) {
+void * wordAddWait( void* tree ) {
 
 	char wordSave[WORD_LENGTH+1];
 
@@ -180,7 +180,7 @@ void * wordAddWait(struct tsWordTree* tree) {
 		pthread_mutex_unlock(&bufferUse);
 
 		//add word
-		addWord_tswm(tree, wordSave);
+		addWord_tswm((struct tsWordTree*)tree, wordSave);
 	}
 
 	return NULL;
